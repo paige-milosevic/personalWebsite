@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+import Button from '@mui/material/Button'
 
-const PersonForm= () => {
+import '@fontsource/roboto/500.css';
+
+const PersonForm = () => {
     const [ firstName, setFirstName] = useState("");
     const [ lastName, setLastName] = useState("");
 
@@ -33,6 +36,7 @@ const PersonForm= () => {
                     <label>Last Name</label>
                     <input type="text" onChange = {(e)=>setLastName(e.target.value)}/>
                 </div>
+                <Button variant="contained">Submit</Button>
                 <input type="submit"/>
             </form>
         </div>
